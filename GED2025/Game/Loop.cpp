@@ -1,0 +1,50 @@
+#include "pch.h"
+#include "Loop.h"
+
+
+void Loop::Init(AudioEngine* _audEngine)
+{
+	Sound::Init(_audEngine);
+
+	if (m_sfx)
+	{
+		m_loop = m_sfx->CreateInstance();
+		this->Play();
+	}
+}
+
+
+Loop::Loop()
+{
+	m_type = "LOOP";
+}
+
+Loop::~Loop()
+{
+	m_loop->Stop(true);
+	m_loop.reset();
+}
+
+void Loop::Play()
+{
+	if (m_playing)
+	{
+		m_loop->Stop(true);
+	}
+	else
+	{
+		m_loop->Play(true);
+	}
+	m_playing = !m_playing;
+
+}
+
+
+void Loop::Tick(GameState* _GS)
+{
+	_GS;
+	m_loop->SetVolume(m_volume);
+	m_loop->SetPitch(m_pitch);
+	m_loop->SetPan(m_pan);
+	m_loop->Play(m_playing);
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ImageContentTask Include="flagColour.tga" />
+    <ImageContentTask Include="grass.jpg" />
+    <ImageContentTask Include="particle.tga" />
+    <ImageContentTask Include="white.jpg" />
+    <ImageContentTask Include="Bandit_Texture_Low_Poly.tga" />
+    <ImageContentTask Include="bat.tga" />
+    <ImageContentTask Include="Template_Basecolor.tga" />
+    <ImageContentTask Include="pause.png" />
+    <ImageContentTask Include="10609_Toy_Race_Car_SG_v1_diffuse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="READ_ME.txt" />
+  </ItemGroup>
+</Project>
