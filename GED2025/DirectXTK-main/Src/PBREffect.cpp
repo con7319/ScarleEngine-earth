@@ -133,7 +133,7 @@ namespace
 #include "PBREffect_VSConstant.inc"
 #include "PBREffect_VSConstantBn.inc"
 
-#include "PBREffect_VSConstantInst.inc"
+//#include "PBREffect_VSConstantInst.inc"
 #include "PBREffect_VSConstantBnInst.inc"
 
 #include "PBREffect_VSConstantVelocity.inc"
@@ -159,7 +159,7 @@ const ShaderBytecode EffectBase<PBREffectTraits>::VertexShaderBytecode[] =
     { PBREffect_VSConstantBn,         sizeof(PBREffect_VSConstantBn)         },
     { PBREffect_VSConstantVelocityBn, sizeof(PBREffect_VSConstantVelocityBn) },
 
-    { PBREffect_VSConstantInst,       sizeof(PBREffect_VSConstantInst)       },
+    { PBREffect_VSConstantBnInst,     sizeof(PBREffect_VSConstantBnInst)     },
     { PBREffect_VSConstantBnInst,     sizeof(PBREffect_VSConstantBnInst)     },
 
     { PBREffect_VSSkinned,            sizeof(PBREffect_VSSkinned)            },

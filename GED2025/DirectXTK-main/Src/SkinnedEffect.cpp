@@ -125,7 +125,7 @@ namespace
 
 #include "SkinnedEffect_VSSkinnedOneLightOneBoneBn.inc"
 #include "SkinnedEffect_VSSkinnedOneLightTwoBonesBn.inc"
-#include "SkinnedEffect_VSSkinnedOneLightFourBonesBn.inc"
+//#include "SkinnedEffect_VSSkinnedOneLightFourBonesBn.inc"
 
 #include "SkinnedEffect_VSSkinnedPixelLightingOneBoneBn.inc"
 #include "SkinnedEffect_VSSkinnedPixelLightingTwoBonesBn.inc"
@@ -159,7 +159,7 @@ const ShaderBytecode EffectBase<SkinnedEffectTraits>::VertexShaderBytecode[] =
 
     { SkinnedEffect_VSSkinnedOneLightOneBoneBn,         sizeof(SkinnedEffect_VSSkinnedOneLightOneBoneBn)         },
     { SkinnedEffect_VSSkinnedOneLightTwoBonesBn,        sizeof(SkinnedEffect_VSSkinnedOneLightTwoBonesBn)        },
-    { SkinnedEffect_VSSkinnedOneLightFourBonesBn,       sizeof(SkinnedEffect_VSSkinnedOneLightFourBonesBn)       },
+    { SkinnedEffect_VSSkinnedOneLightTwoBonesBn,        sizeof(SkinnedEffect_VSSkinnedOneLightTwoBonesBn)       },
 
     { SkinnedEffect_VSSkinnedPixelLightingOneBoneBn,    sizeof(SkinnedEffect_VSSkinnedPixelLightingOneBoneBn)    },
     { SkinnedEffect_VSSkinnedPixelLightingTwoBonesBn,   sizeof(SkinnedEffect_VSSkinnedPixelLightingTwoBonesBn)   },
