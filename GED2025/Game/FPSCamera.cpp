@@ -23,9 +23,11 @@ void FPSCamera::Tick(GameState* _GS)
 
 	Vector3 move = Vector3::Zero;//this is how I'll move this frame
 
-	//mouse for rotation
-	m_theta += _GS->m_MS.x * m_spin * _GS->m_dt;
-	m_phi += _GS->m_MS.y * m_spin * _GS->m_dt;
+	//mouse for rotation //inverted back to correct for typical FPS controls
+	m_theta -= _GS->m_MS.x * m_spin * _GS->m_dt;
+	m_phi -= _GS->m_MS.y * m_spin * _GS->m_dt;
+	
+	
 
 	//limit rotation
 	if (m_phi < (-XM_PIDIV2 + 0.001f))
