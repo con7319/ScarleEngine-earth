@@ -8,6 +8,7 @@
 #include "VBSnail.h"
 #include "GamePadPhysCMOGO.h"
 #include "GeoPrim.h"
+#include "TerrainManager.h"
 
 using std::string;
 
@@ -44,6 +45,10 @@ GameObject* GOFactory::makeNewGO(std::string _type)
 	else if (_type == "GEOPRIM")
 	{
 		return new GeoPrim();
+	}
+	else if (_type == "TERRAINMAN")
+	{
+		return new TerrainManager();
 	}
 	else
 	{

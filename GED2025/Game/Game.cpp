@@ -25,6 +25,9 @@
 #include "Light.h"
 #include "SoundFactory.h"
 #include "Sound.h"
+#include "TerrainManager.h"
+#include "TerrainChunk.h"
+
 
 extern void ExitGame() noexcept;
 
@@ -109,6 +112,9 @@ void Game::Initialize(HWND _window, int _width, int _height)
 
 	//set up VBGO render system
 	VBGO::VBGOInit(m_d3dDevice.Get());
+
+	
+	
 
 	//set up Audio system
 	AUDIO_ENGINE_FLAGS eflags = AudioEngine_Default;
@@ -199,6 +205,7 @@ void Game::Update(DX::StepTimer const& timer)
 		(*it)->Tick(m_GS);
 	}
 
+
 	for (list<GameObject2D*>::iterator it = m_GameObject2Ds.begin(); it != m_GameObject2Ds.end(); it++)
 	{
 		(*it)->Tick(m_GS);
@@ -223,7 +230,7 @@ void Game::Render()
 	m_DD->m_pd3dImmediateContext = m_d3dContext.Get();
 
 	//first draw all the render targets
-	//TODO: a lot of repeated code here that could be cleaned up
+	// a lot of repeated code here that could be cleaned up
 	//also would be a good start to a render pass system
 	for (vector<Camera*>::iterator it = m_Cameras.begin(); it != m_Cameras.end(); ++it)
 	{
@@ -279,6 +286,8 @@ void Game::Render()
 	{
 		(*it)->Draw(m_DD);
 	}
+
+
 
 	// Draw sprite batch stuff 
 	m_DD2D->m_Sprites->Begin(DirectX::SpriteSortMode_Deferred, m_states->NonPremultiplied());

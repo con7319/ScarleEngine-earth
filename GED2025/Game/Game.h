@@ -29,6 +29,7 @@ class GameObject;
 struct DrawData;
 class Light;
 class Sound;
+class TerrainManager;
 
 // A basic game implementation that creates a D3D11 device and
 // provides a game loop.

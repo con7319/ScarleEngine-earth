@@ -195,6 +195,18 @@
     <ClInclude Include="GeoPrim.h">
       <Filter>Game Objects\3D\GO3D\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="TerrainManager.h">
+      <Filter>Game Objects\3D\GO3D\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainChunk.h">
+      <Filter>Game Objects\3D\GO3D\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PerlinNoise.h">
+      <Filter>Game Objects\3D\GO3D\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainConstants.h">
+      <Filter>Game Objects\3D\GO3D\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -288,6 +300,15 @@
       <Filter>Game Objects\2D\Source</Filter>
     </ClCompile>
     <ClCompile Include="GeoPrim.cpp">
+      <Filter>Game Objects\3D\GO3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainManager.cpp">
+      <Filter>Game Objects\3D\GO3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainChunk.cpp">
+      <Filter>Game Objects\3D\GO3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="PerlinNoise.cpp">
       <Filter>Game Objects\3D\GO3D\Source</Filter>
     </ClCompile>
   </ItemGroup>
